@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  flask-app:
+    build: .
+    container_name: api-logger
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
+      - ./request_info.txt:/app/request_info.txt
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+    restart: unless-stopped

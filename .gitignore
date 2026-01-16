@@ -17,6 +17,9 @@ instance/
 # Application-specific
 request_info.txt
 
+# Docker
+.dockerignore
+
 # Distribution / packaging
 *.egg-info/
 dist/
